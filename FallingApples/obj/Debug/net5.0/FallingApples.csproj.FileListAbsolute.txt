@@ -1,0 +1,16 @@
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\bin\Debug\net5.0\FallingApples.exe
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\bin\Debug\net5.0\FallingApples.deps.json
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\bin\Debug\net5.0\FallingApples.runtimeconfig.json
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\bin\Debug\net5.0\FallingApples.runtimeconfig.dev.json
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\bin\Debug\net5.0\FallingApples.dll
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\bin\Debug\net5.0\ref\FallingApples.dll
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\bin\Debug\net5.0\FallingApples.pdb
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\obj\Debug\net5.0\FallingApples.csproj.AssemblyReference.cache
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\obj\Debug\net5.0\FallingApples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\obj\Debug\net5.0\FallingApples.AssemblyInfoInputs.cache
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\obj\Debug\net5.0\FallingApples.AssemblyInfo.cs
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\obj\Debug\net5.0\FallingApples.csproj.CoreCompileInputs.cache
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\obj\Debug\net5.0\FallingApples.dll
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\obj\Debug\net5.0\ref\FallingApples.dll
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\obj\Debug\net5.0\FallingApples.pdb
+C:\Users\nubbl\Desktop\mini projects\c#\FallingApples\obj\Debug\net5.0\FallingApples.genruntimeconfig.cache

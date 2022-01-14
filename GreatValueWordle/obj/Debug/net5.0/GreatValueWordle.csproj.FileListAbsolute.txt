@@ -1,0 +1,16 @@
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\bin\Debug\net5.0\GreatValueWordle.exe
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\bin\Debug\net5.0\GreatValueWordle.deps.json
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\bin\Debug\net5.0\GreatValueWordle.runtimeconfig.json
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\bin\Debug\net5.0\GreatValueWordle.runtimeconfig.dev.json
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\bin\Debug\net5.0\GreatValueWordle.dll
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\bin\Debug\net5.0\ref\GreatValueWordle.dll
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\bin\Debug\net5.0\GreatValueWordle.pdb
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\obj\Debug\net5.0\GreatValueWordle.csproj.AssemblyReference.cache
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\obj\Debug\net5.0\GreatValueWordle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\obj\Debug\net5.0\GreatValueWordle.AssemblyInfoInputs.cache
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\obj\Debug\net5.0\GreatValueWordle.AssemblyInfo.cs
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\obj\Debug\net5.0\GreatValueWordle.csproj.CoreCompileInputs.cache
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\obj\Debug\net5.0\GreatValueWordle.dll
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\obj\Debug\net5.0\ref\GreatValueWordle.dll
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\obj\Debug\net5.0\GreatValueWordle.pdb
+C:\Users\nubbl\Desktop\mini projects\c#\GreatValueWordle\obj\Debug\net5.0\GreatValueWordle.genruntimeconfig.cache
