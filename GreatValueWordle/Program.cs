@@ -1,4 +1,7 @@
-﻿using System;
+﻿// GREAT VALUE WORDLE by Dan Donchuk (thatnoobles)
+// Feel free to use this however you want.
+
+using System;
 using System.IO;
 
 namespace GreatValuewordle
@@ -18,13 +21,15 @@ namespace GreatValuewordle
 		private const int TOTAL_GUESSES = 6;
 		private int remainingGuesses = TOTAL_GUESSES;
 		private string[] guesses = new string[TOTAL_GUESSES]; 
-		private string[] wordList = File.ReadAllLines("words.txt");
+		private string[] wordList = File.ReadAllLines("words.txt");	// List comes from here: https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt
 
 		public Game()
 		{
 			Random random = new Random();
 
-			word = wordList[random.Next(0, 1572)];	// 1572 is a totally arbitrary number lmao
+			// 1572 is a totally arbitrary number lmao
+			// The words get more obscure later in the list, so this bound only lets common words be used
+			word = wordList[random.Next(0, 1572)];
 			Start();
 		}
 
@@ -42,6 +47,7 @@ namespace GreatValuewordle
 			{
 				Console.Clear();
 
+				// Print each letter of each of the player's guesses, coloring it appropriately
 				foreach (string word in guesses)
 				{
 					if (word != null)
@@ -56,13 +62,15 @@ namespace GreatValuewordle
 				}
 
 				Console.Write($"\nGuess a 5-letter word ({remainingGuesses} guesses left): ");
-				string guess = Console.ReadLine().Trim().ToLower();
+				string guess = Console.ReadLine().Trim().ToLower();		// Clean the input, of course
 
+				// Only 5-letter actual words are allowed. Otherwise don't let the player guess
 				if (guess.Length != 5 || !InWordList(guess))
 				{
 					continue;
 				}
 
+				// :)
 				if (guess == word)
 				{
 					Console.ForegroundColor = ConsoleColor.Green;    
@@ -77,6 +85,7 @@ namespace GreatValuewordle
 				remainingGuesses--;
 			}
 
+			// :(
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.WriteLine($"\nYou're out of guesses! The word was {word}. Press enter to exit.");
 			Console.ResetColor();
@@ -86,6 +95,8 @@ namespace GreatValuewordle
 
 		private bool InWordList(string word)
 		{
+			// Although the secret word can only come from a small portion of the list,
+			// the player can guess any word on the list (even obscure ones)
 			foreach (string s in wordList)
 			{
 				if (s.Trim() == word)
@@ -99,6 +110,11 @@ namespace GreatValuewordle
 	
 		private void PrintLetterColor(string guess, char letter, int index)
 		{
+			// Letter colors:
+			// GRAY		not in word
+			// YELLOW	in word, but not in correct position
+			// GREEN	in word, in correct position
+
 			Console.ForegroundColor = ConsoleColor.DarkGray;
 
 			if (word.Contains(letter))

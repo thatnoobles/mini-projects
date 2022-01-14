@@ -1,4 +1,7 @@
-﻿#pragma warning disable CA1416	// SetWindowSize() warning about possibly breaking cross-platform, don't need to worry about it
+﻿// FALLING APPLES by Dan Donchuk (thatnoobles)
+// Feel free to use this however you want
+
+#pragma warning disable CA1416	// SetWindowSize() warning about possibly breaking cross-platform, don't need to worry about it
 
 using System;
 using System.Collections.Generic;
@@ -29,8 +32,9 @@ namespace FallingApples
 
 		public static void Start()
 		{
-			Console.Clear();
+			// Initialize the game board
 
+			Console.Clear();
 			for (int i = 0; i < board.GetLength(0); i++)
 			{
 				for (int j = 0; j < board.GetLength(1); j++)
@@ -53,6 +57,7 @@ namespace FallingApples
 
 					if (keyInfo.Key == ConsoleKey.LeftArrow)
 					{
+						// Prevent player from going off the left side of the screen
 						if (GetPlayerPosition() != 0)
 						{
 							int currentPlayerPos = GetPlayerPosition();
@@ -63,6 +68,7 @@ namespace FallingApples
 					}
 					else if (keyInfo.Key == ConsoleKey.RightArrow)
 					{
+						// Prevent player from going off the right side of the screen
 						if (GetPlayerPosition() != board.GetLength(1) - 1)
 						{
 							int currentPlayerPos = GetPlayerPosition();
@@ -73,21 +79,22 @@ namespace FallingApples
 					}
 				}
 
-				// Spawn an apple every 1 second
+				// Spawn an apple every so often. Interval decreases every 5 points
 				if (frame % spawnWait == 0)
 				{
 					SpawnApple();
 				}
 
-				// Move apples every .5 seconds
+				// Move apples every other frame
 				if (frame % 2 == 0)
 				{
 					UpdateApples();
 				}
 
 				Display();
-				Thread.Sleep(16);	// approx. 60 fps
+				Thread.Sleep(16);	// Relatively high framerate
 
+				// Stop game if player loses
 				if (gameOver)
 				{
 					Console.Clear();
@@ -104,6 +111,7 @@ namespace FallingApples
 		{
 			for (int i = 0; i < board.GetLength(0); i++)
 			{
+				// Set the cursor position to the start of each row instead of using Console.Clear to prevent screen flickering
 				Console.SetCursorPosition(0, i);
 
 				for (int j = 0; j < board.GetLength(1); j++)
@@ -121,6 +129,7 @@ namespace FallingApples
 				Console.Write("\n");
 			}
 
+			// Display the score at the bottom of the screen
 			Console.ResetColor();
 			Console.SetCursorPosition(0, 32);
 			Console.WriteLine(score);
@@ -156,11 +165,13 @@ namespace FallingApples
 						{
 							switch (board[i + 1, j])
 							{
+								// Move apple down if there is an empty space below it
 								case '.':
 									board[i, j] = '.';
 									board[i + 1, j] = 'O';
 									break;
 
+								// Catch apple if player is below it
 								case '~':
 									board[i, j] = '.';
 									score++;
@@ -179,6 +190,7 @@ namespace FallingApples
 						}
 						else
 						{
+							// Mark the game as over if apple is about to go off-screen
 							gameOver = true;
 						}
 					}
@@ -188,6 +200,8 @@ namespace FallingApples
 
 		private static List<int> FindRowsWithApples()
 		{
+			// Search through the board once to find all apples in one go--instead of constantly looping through the board
+			// This prevents apple from being found, moving down and immediately being found again
 			List<int> output = new List<int>();
 
 			for (int i = 0; i < board.GetLength(0); i++)
